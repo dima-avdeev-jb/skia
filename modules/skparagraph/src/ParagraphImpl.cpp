@@ -119,8 +119,6 @@ void ParagraphImpl::layout(SkScalar rawWidth) {
     std::cout << "std::cout, ParagraphImpl::layout" << std::endl;
     SkStringPrintf("SkStringPrintf, ParagraphImpl::layout");
     SkDebugf("SkDebugf, ParagraphImpl::layout");
-    SkASSERT(false); // Fail-fast if an error occurs
-    return;
 
     // TODO: This rounding is done to match Flutter tests. Must be removed...
     auto floorWidth = SkScalarFloorToScalar(rawWidth);
