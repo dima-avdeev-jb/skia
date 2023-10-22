@@ -39,6 +39,7 @@
 
 #include <string.h>
 #include <memory>
+#include <iostream>
 
 #if (defined(SK_BUILD_FOR_IOS) && defined(__IPHONE_14_0) &&  \
       __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_14_0) ||  \
@@ -472,6 +473,7 @@ protected:
     }
 
     SkFontStyleSet* onMatchFamily(const char familyName[]) const override {
+        cout << "familyName: " << familyName << endl;
         if (!familyName) {
             return nullptr;
         }
