@@ -474,7 +474,8 @@ protected:
 
     SkFontStyleSet* onMatchFamily(const char familyName[]) const override {
         std::cout << "familyName: " << familyName << std::endl;
-        fail(SkStringPrintf("printf familyName: %s", familyName));
+        SkStringPrintf("SkStringPrintf, familyName: %s", familyName);
+        SkDebugf("SkDebugf, familyName: %s", familyName);
         if (!familyName) {
             return nullptr;
         }
